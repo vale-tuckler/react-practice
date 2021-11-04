@@ -7,7 +7,7 @@ import Carrito from './components/Carrito';
 
 function App() {
 
-  //Creando listado de productos - primer state
+  //state para listado de productos
   const [productos, setProductos] = useState([
     {id:1, articulo:'iPhone', precio:2000},
     {id:2, articulo:'Xiaomi phone', precio:500},
@@ -15,7 +15,7 @@ function App() {
     {id:4, articulo:'Samsung phone', precio:2000}
   ]);
 
-  //creando carrito de compras
+  // state para carrito de compras
   const [carrito, addToCarrito] = useState([]);
 
   //Obteniendo la fecha
@@ -39,6 +39,7 @@ function App() {
       ))}
       <Carrito 
           carrito = {carrito}
+          addToCarrito = {addToCarrito}
       />
       <Footer
         year = {date}
